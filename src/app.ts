@@ -26,4 +26,11 @@ app.use(authGuard);
 
 app.get('/', (req, res) => res.send('Hello World!'));
 
+// error handler
+app.use((err: Error, req: express.Request, res: express.Response) => {
+  // log error
+  process.stderr.write(err.message);
+  res.status(500).json({ code: 0, messages: ['internal server error!'] });
+  return false;
+});
 export default app;
