@@ -1,9 +1,11 @@
 **After clone**
-change file .env.dist -> .env, change config as you want
 
-create a key file /config/authen/jwt-public.key
+- Change file .env.dist -> .env, change config as you want
 
-You can generate private and public key for algorithms RS256 from some website like: https://travistidwell.com/jsencrypt/demo/
+- Create a key file /config/authen/jwt-public.key
+
+- You can generate private and public key for algorithms RS256 from some website like: https://travistidwell.com/jsencrypt/demo/
+
 Key will be like:
 
 ```
@@ -16,6 +18,7 @@ l7De3IGBCoyAcWRe7wIDAQAB
 ```
 
 private-key use to hash jwt token, and public-key use to decode it. Only service create token need to keep and secure private-key.
+
 **Global lib**
 
 ```
